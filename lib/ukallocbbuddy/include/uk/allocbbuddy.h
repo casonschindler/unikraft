@@ -42,6 +42,8 @@
 extern "C" {
 #endif
 
+void balloon_init(struct uk_alloc *a);
+
 struct uk_alloc *uk_allocbbuddy_init(void *base, size_t len);
 
 #ifdef __cplusplus
