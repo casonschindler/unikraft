@@ -128,3 +128,16 @@ void ukplat_stack_set_current_thread(void *thread_addr __unused)
 {
 	/* For now, signals use the current process stack */
 }
+
+
+/* Memory ballooning is not yet supported for linuxu */
+
+int ukplat_inflate(void *va, int order)
+{
+	return -ENOSYS;
+}
+
+int ukplat_deflate(void *va, int order)
+{
+	return -ENOSYS;
+}
